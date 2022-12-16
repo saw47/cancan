@@ -1,0 +1,15 @@
+==Windows==
+Для сборки .exe файла запуска  необходимо подключить модуль "pyinstaller" и в терминале в корневой папке проекта выполнить следующее:
+pyinstaller --hidden-import=can.interfaces.slcan --add-data "icon.png;." --distpath dist_win -n "CANable" -i "moon.ico" -w Main.py
+
+
+==MacOC==
+Для сборки файла запуска необходимо подключить модуль "pyinstaller" и в терминале в корневой папке проекта выполнить следующее:
+pyinstaller --hidden-import=can.interfaces.slcan --add-data "icon.png:." --distpath dist_osx -n 'CANable' -i 'moon.icns' -w Main.py
+
+Есть второй способ более надежный с помощью библиотеки "py2app", запускаем файл с прописанными настройками "setup.py":
+python setup.py py2app
+
+==Linux==
+Для сборки файла запуска необходимо подключить модуль "pyinstaller" и в терминале в корневой папке проекта выполнить следующее:
+pyinstaller --hidden-import=can.interfaces.slcan --distpath dist_linux -n 'canable-ultralite' --onefile Main.py
