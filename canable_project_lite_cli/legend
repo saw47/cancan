@@ -1,0 +1,21 @@
+main started cli
+
+Cli started threads:
+
+- adapter
+	- born can factory which user choose
+
+- printer
+	- print printed_value if user_input has changed
+		- started from Cli, after pause input
+- watcher
+	- dont know what is make
+
+- input
+	- follow input string, change user_input
+
+
+
+!!!!!! cut from CLI
+
+        """"""
