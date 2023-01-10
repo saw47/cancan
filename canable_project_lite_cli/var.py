@@ -1,54 +1,30 @@
-from util import print_iterator
-
-# var
-level: int = 0
-
-user_inp = ""
-
-who_is_run: list = []
-work_process: list = []
-
-flags_zero_level: dict = {
-    "a": False,
-    "s": False,
-    "x": False,
-    "h": False
-}
-
 # CONST
 
-INVALID_ARGUMENT: str = "Невалидный аргумент"
+SECOND: float = 1.00
 
-WAIT_INP: str = "Ожидание ввода"
+INVALID_ARGUMENT: str = "Invalid argument"
 
 STOP: str = "d"
 EXIT: str = "q"
 
-ZERO_LEVEL_2: dict = {
-    "a": "разбудить LVL3",
-    "s": "разбудить LVL2, который не будится пакетами для LVL3",
-    "x": "Разбудить lvl3 c кластером",
-    "h": "Что-то более сложное или уникальное",
-    "q": "выйти"
-}
+# var
+level: int = 0
+user_inp = ""
+printed_value = ""
+input_interrupt: bool = False
 
-ZERO_LEVEL: list = [
-    ("a", "разбудить LVL3"),
-    ("s", "разбудить LVL2, который не будится пакетами для LVL3"),
-    ("x", "Разбудить lvl3 c кластером"),
-    ("h", "Что-то более сложное или уникальное"),
-    ("q", "выйти")
-]
-
+# help and start scripts
 HELP_S: str = "-h"
 HELP_L: str = "--help"
-DOWN: str = "↓^↓^↓ Ввод в строке ниже ↓^↓^↓"
+VERSION: str = "CANable CLI client\nversion B0"
+WELCOME: str = "Hi, i'am CanCan mazafacka"
+HELP_TEXT: str = f"TODO"
 
-VERSION: str = "CANable lite CLI client\nversion B0"
-
-WELCOME: str = "Привет, я консольный клиент для canable."
-
-HELP_TEXT: str = f"{VERSION}\nКоманды можно передавать в качестве аргументов при запуске или внутри " \
-                 f"интерфейса, если есть приглашение к вводу. В CLI команды вводятся в формате " \
-                 f"-[команда], в интерфейсе - просто [команда]\nСписок " \
-                 f"команд:\n{print_iterator(ZERO_LEVEL)}"
+# First level selector -> select car
+LADA_GRANTA_ENJOY_PRO: str = "g"
+LADA_VESTA_ENJOY_PRO: str = "v"
+LADA_VESTA_ENJOY_VISION_PRO: str = "p"
+PRINTER_CAR_SELECT: str = f"Select car and can protocol:\n" \
+                    f"LADA_VESTA_ENJOY_PRO -> {LADA_VESTA_ENJOY_PRO};\n" \
+                    f"LADA_GRANTA_ENJOY_PRO -> {LADA_GRANTA_ENJOY_PRO};\n" \
+                    f"LADA_VESTA_ENJOY_VISION_PRO -> {LADA_VESTA_ENJOY_VISION_PRO}.\n"

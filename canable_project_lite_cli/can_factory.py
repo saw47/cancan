@@ -2,16 +2,16 @@ import threading
 import time
 import can
 
-from Input import Input
+from InputAdapter import InputAdapter
 from var import ZERO_LEVEL_2, flags_zero_level, STOP, EXIT, user_inp
 from util import fill_who_run_now
 from bus import lada_ph2_bus
 
 
-def select_lib(arg: str, adapter: Input):
+def select_lib(arg: str, adapter: InputAdapter):
     pass
 
-def run_command(arg: str, adapter: Input):
+def run_command(arg: str, adapter: InputAdapter):
     input_adapter = adapter
     if arg in list(ZERO_LEVEL_2.keys()) and arg != STOP:
 
